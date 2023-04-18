@@ -5,29 +5,40 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./src/style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
         <script type="module" defer src="/src/main.ts"></script>
 
         <title>Vite + TS</title>
     </head>
-    <body class="bg-slate-600 text-teal-50">
-        <section>
-            <ul>
-                <li class="scroll" data-rate="-2" data-direction="vertical">
+    <body
+        class="h-screen m-0 font-bold bg-slate-200 text-slate-900 font-mont text-8xl"
+    >
+        <section class="h-full">
+            <ul
+                class="grid items-center justify-center h-screen p-0 m-0 grid-cols-custom place-items-center"
+            >
+                <li class="scroll" data-rateY="-2" data-direction="vertical">
                     par
                 </li>
                 <li>al</li>
-                <li class="scroll" data-rate="2" data-direction="vertical">
+                <li class="scroll" data-rateY="2" data-direction="vertical">
                     lax
                 </li>
             </ul>
 
             <span
-                class="scroll"
+                class="scroll w-[117px] h-28 absolute bottom-0 left-0 bg-slate-900 rounded-full"
                 data-rateY="1"
-                data-rateX="2"
+                data-rateX="0.5"
                 data-direction="horizontal"
             ></span>
         </section>
-        <section></section>
+        <section class="h-full"></section>
     </body>
 </html>
