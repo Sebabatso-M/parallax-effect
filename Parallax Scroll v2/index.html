@@ -6,23 +6,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script type="module" defer src="/src/main.ts"></script>
         <link rel="stylesheet" href="./src/style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
         <title>Parallax V2</title>
     </head>
-    <body class="">
+    <body class="font-poppins">
         <section class="top h-screen bg-brownish">scroll down</section>
 
         <section class="container h-screen bg-brownish">
-            <div class="wrapper">
-                <h1 class="text-mask">
-                    <span>The Warrior Awaits</span>
+            <div
+                class="wrapper w-screen overflow-hidden relative z-0 aspect-video text-center bg-no-repeat bg-[size:110%] bg-[url('../images/bg_1.jpg')] mx-auto"
+            >
+                <h1
+                    class="text-mask absolute w-full z-10 font-bold text-5xl text-white top-1/2 text-center uppercase translate-y-1/2"
+                >
+                    <span class="block">The Warrior Awaits</span>
                 </h1>
-                <div class="bg2"></div>
-                <div class="mountains"></div>
-                <div class="soldier"></div>
+                <div
+                    class="bg2 picture z-[3] w-full bg-[url('../images/bg2.webp')]"
+                ></div>
+                <div
+                    class="mountains picture z-[2] w-full bg-[url('../images/mountains_1.webp')]"
+                ></div>
+                <div
+                    class="soldier picture h-screen z-[2] bg-[url('../images/soldier.webp')]"
+                ></div>
             </div>
         </section>
 
         <section class="h-screen bg-brownish"></section>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+            integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     </body>
 </html>
-s

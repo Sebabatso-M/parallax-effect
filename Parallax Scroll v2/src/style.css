@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .picture {
+        @apply w-full origin-center h-full absolute  bg-no-repeat;
+        background-size: 100%;
+    }
+}
+
+.task-mask {
+    @apply overflow-hidden;
+}
+
+.top {
+    @apply pt-12 text-5xl text-center text-white;
+}
