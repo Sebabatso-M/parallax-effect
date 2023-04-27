@@ -17,26 +17,29 @@ let xValue = 0;
 let yValue = 0;
 let zValue = 0;
 
+let rotateDegree = 0;
+
 window.addEventListener('mousemove', (e: MouseEvent) => {
     // assign cursor coordinates to respective x and y value
     // coordinates of distance from center
     xValue = e.clientX - window.innerWidth / 2;
     yValue = e.clientY - window.innerHeight / 2;
+    rotateDegree = (xValue / (window.innerWidth / 2)) * 20;
 
     parallaxImgs.forEach((element) => {
         const image = <HTMLImageElement>element;
 
-        zValue = (e.clientX - parseFloat(getComputedStyle(image).left)) / 3;
+        zValue = e.clientX - parseFloat(getComputedStyle(image).left);
 
         const xRate = parseFloat(image.dataset.speedx!);
         const yRate = parseFloat(image.dataset.speedy!);
         const zRate = parseFloat(image.dataset.speedz!);
+        const rRate = parseFloat(image.dataset.rotate!);
 
         image.style.transform = `
-        translateX(${(-xValue * xRate) / 15}px) 
-        translateY(${(yValue * yRate) / 5}px) 
-        translateZ(${zValue * zRate}px)`;
-
-        console.table([xRate, yRate, zRate]);
+        translateX(${-xValue * xRate}px) 
+        translateY(${yValue * yRate}px) 
+        translateZ(${zValue * zRate}px)
+        rotateY(${rotateDegree * rRate}deg)`;
     });
 });
